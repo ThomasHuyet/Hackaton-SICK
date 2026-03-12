@@ -1,3 +1,6 @@
+"""
+Implémente la stratégie Blackjack utilisée pour recommander Hit ou Stay.
+"""
 
 def get_card_value(card):
     """
@@ -350,5 +353,6 @@ def get_optimal_move(player_cards_list, dealer_card_str):
         return "Hit" # Or Stay? 16 vs 10. Book says Hit if Surrender not allowed.
         
     return "Stay" # Default
+
 
 

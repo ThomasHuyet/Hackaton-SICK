@@ -1,3 +1,8 @@
+"""
+Interface graphique du jeu Blackjack.
+Utilise Tkinter pour afficher la table, les cartes et les actions des joueurs.
+"""
+
 import tkinter as tk
 from tkinter import messagebox
 import time
@@ -248,3 +253,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = BlackjackApp(root)
     root.mainloop()
+

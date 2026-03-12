@@ -1,3 +1,8 @@
+"""
+Gestion de l'état du jeu Blackjack.
+Stocke les cartes, calcule les scores et détermine les gagnants.
+"""
+
 class GameState:
     def __init__(self):
         self.dealer_cards = []
@@ -97,3 +102,4 @@ class GameState:
             "dealer": {"cards": self.dealer_cards, "score": d_score, "soft": d_soft},
             "current": self.current_player
         }
+

@@ -1,23 +1,43 @@
 # Vision Blackjack AI
 
-Projet réalisé dans le cadre d'un hackathon étudiant utilisant la vision industrielle et l'IA pour assister un joueur de Blackjack.
+Projet réalisé lors d’un hackathon combinant **vision industrielle**, **Python** et **stratégie Blackjack**.
 
-Le système utilise une caméra SICK Nova pour détecter les cartes d'une vraie table de Blackjack et une interface Python pour visualiser la partie et fournir une recommandation stratégique optimale.
+Le système observe une vraie table de Blackjack filmée par une caméra (SICK Nova), récupère les cartes détectées et reproduit la partie dans une interface graphique qui aide les joueurs à prendre la décision optimale.
 
----
+## Principe du projet
 
-# Objectif du projet
+1. Une caméra filme une table de Blackjack réelle.
+2. Le système de vision détecte les cartes.
+3. Les valeurs sont envoyées à l'application Python via socket.
+4. L'interface graphique reconstruit la partie.
+5. Une stratégie Blackjack recommande **Hit** ou **Stay**.
 
-Créer un assistant Blackjack capable de :
+## Interface
 
-- détecter les cartes sur une vraie table
-- récupérer les valeurs via un flux réseau (socket)
-- afficher les cartes dans une interface graphique
-- calculer les scores des joueurs
-- recommander l'action optimale (Hit / Stay) selon la stratégie Blackjack
+L'interface est développée en **Python avec Tkinter**.
 
----
+Elle permet de :
 
-# Architecture du projet
+- démarrer une partie
+- tirer une carte (Hit)
+- passer son tour (Stay)
+- visualiser les cartes et les scores
+- afficher la recommandation stratégique
 
-Le projet est divisé en plusieurs modules.
+## Technologies utilisées
+
+- Python
+- Tkinter
+- Socket TCP
+- Vision industrielle SICK Nova
+
+## Structure du projet
+
+- **BlackjackApp.py** : interface graphique et gestion du jeu
+- **Connection.py** : communication avec le système de vision
+- **GameState.py** : gestion de l'état de la partie
+- **BlackJackStrategy.py** : stratégie Blackjack
+- **test_blackjack.py** : tests de la logique
+
+## Lancer le projet
+python src/BlackjackApp.py

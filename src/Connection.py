@@ -1,3 +1,8 @@
+"""
+Communication avec le système de vision SICK Nova.
+Envoie les triggers et récupère les cartes détectées via socket.
+"""
+
 import socket
 import time
 
@@ -71,4 +76,5 @@ class BlackjackClient:
         except Exception as e:
             print(f"Communication error: {e}")
             self.disconnect()
+
             return None

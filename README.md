@@ -1,2 +1,23 @@
-# Hackaton-SICK
-Un assistant BlackJack “table-side” qui :  voit les cartes (joueur(s) + dealer),  reconstruit l’état (main(s), soft/hard, total du dealer),  recommande une action (hit or stand) basée sur basic strategy + comptage,  affiche des métriques : EV (espérance), probabilité de bust, probabilité de victoire/égalité/défaite...
+# Vision Blackjack AI
+
+Projet réalisé dans le cadre d'un hackathon étudiant utilisant la vision industrielle et l'IA pour assister un joueur de Blackjack.
+
+Le système utilise une caméra SICK Nova pour détecter les cartes d'une vraie table de Blackjack et une interface Python pour visualiser la partie et fournir une recommandation stratégique optimale.
+
+---
+
+# Objectif du projet
+
+Créer un assistant Blackjack capable de :
+
+- détecter les cartes sur une vraie table
+- récupérer les valeurs via un flux réseau (socket)
+- afficher les cartes dans une interface graphique
+- calculer les scores des joueurs
+- recommander l'action optimale (Hit / Stay) selon la stratégie Blackjack
+
+---
+
+# Architecture du projet
+
+Le projet est divisé en plusieurs modules.
